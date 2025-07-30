@@ -31,6 +31,9 @@ PRODUCT_PACKAGES += \
     android.hardware.security.keymint3-service.strongbox.nxp \
     android.hardware.weaver-service.nxp
 
+# Fingerprint
+$(call soong_config_set_bool,qtidisplay,oplus_udfps,true)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-aospa
