@@ -34,6 +34,9 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 $(call soong_config_set_bool,qtidisplay,oplus_udfps,true)
 
+# OPlus Camera
+$(call inherit-product-if-exists, vendor/oplus/camera/audi/opluscamera.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-aospa
