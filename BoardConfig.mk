@@ -23,11 +23,15 @@ TARGET_KERNEL_ADDITIONAL_FLAGS += CONFIG_AUDI_DTB=y
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Recovery
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 103
+
+# SEPolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Include the proprietary files BoardConfig.
 include vendor/oneplus/audi/BoardConfigVendor.mk

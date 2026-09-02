@@ -39,22 +39,15 @@ AXION_CAMERA_FRONT_INFO := 16
 TARGET_INCLUDE_AXFX := true
 TARGET_ENABLE_BLUR := true
 TARGET_INCLUDES_LOS_PREBUILTS := true
-BYPASS_CHARGE_SUPPORTED := true
 TORCH_STR_SUPPORTED := true
 TARGET_SUPPORTED_REFRESH_RATES := 60,90,120
 TARGET_DOZE_DOUBLE_TAP_PULSE_SUPPORTED := true
 TARGET_DOZE_PICKUP_PULSE_SUPPORTED := true
-
-# Core tweaks
-ifeq ($(TARGET_GAPPS_VARIANT),core)
-    TARGET_INCLUDE_PARTNER_SETUP := true
-    TARGET_INCLUDE_GOOGLE_TELECOMM := false
-
-    PRODUCT_PACKAGES += \
-        Velvet \
-        WellbeingPrebuilt \
-        AndroidPlatformServices \
-        MlkitBarcodeUIPrebuilt \
-        VisionBarcodePrebuilt \
-        TfliteDynamitePrebuilt
-endif
+TARGET_INCLUDE_GOOGLE_TELECOMM := false
+TARGET_INCLUDE_PARTNER_SETUP := true
+PERF_GOV_SUPPORTED := true
+PERF_DEFAULT_GOV := walt
+BYPASS_CHARGE_SUPPORTED := true
+BYPASS_CHARGE_TOGGLE_PATH := /sys/class/oplus_chg/battery/mmi_charging_enable
+HBM_SUPPORTED := true
+HBM_NODE := /sys/class/backlight/panel0-backlight/hbm_mode
