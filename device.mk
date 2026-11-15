@@ -29,6 +29,11 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 2772
 TARGET_SCREEN_WIDTH := 1240
 
+# Camera (SR model .bin names, see Android.bp)
+PRODUCT_PACKAGES += \
+    sr_models.bin_symlink \
+    sr_ref_models.bin_symlink
+
 # Display
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946583411818883.xml
